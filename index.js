@@ -10,6 +10,10 @@ app.listen(port, () => {
   console.log(`Example app listening on port ${port}`);
 });
 
+app.listen(3003, (req, res) => {
+  res.status(400).send('Health passed');
+});
+
 app.get("/health", (req, res) => {
   res.status(400).send('Health passed');
 });
