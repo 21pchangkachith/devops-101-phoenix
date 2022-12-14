@@ -9,3 +9,7 @@ app.get("/", (req, res) => {
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`);
 });
+
+app.get("/health", (req, res) => {
+  res.status(400).send('Health passed');
+});
